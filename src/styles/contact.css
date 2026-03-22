@@ -1,0 +1,356 @@
+*, *::before, *::after{
+box-sizing:border-box;
+}
+
+.contact-container{
+max-width:1100px;
+}
+
+.contact-container h1{
+font-family: "Jost",sans-serif;
+}
+/* Intro */
+
+.contact-intro{
+max-width:750px;
+margin:auto;
+text-align:center;
+line-height:1.7;
+margin-bottom:50px;
+color:#555;
+}
+
+/* Grid Layout */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+gap:40px;
+align-items:start;
+}
+
+/* Form */
+.contact-form{
+
+background:white;
+
+padding:32px 30px;
+
+border-radius:18px;
+
+border:1px solid #e8ecf3;
+
+box-shadow:0 8px 24px rgba(0,0,0,0.06);
+
+transition:all .25s ease;
+
+}
+
+.contact-form h2{
+margin-bottom:10px;
+font-family:"Jost",sans-serif;
+}
+
+
+.contact-form:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 14px 32px rgba(0,0,0,0.08);
+
+}
+
+.form-intro{
+font-size:14px;
+color:#666;
+margin-bottom:20px;
+}
+
+.contact-form label{
+display:block;
+margin-top:14px;
+font-weight:500;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+outline:none;
+
+border-color:var(--hero-main);
+
+box-shadow:0 0 0 2px rgba(44,110,213,0.15);
+
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:10px 12px;
+margin-top:6px;
+border:1px solid #dfe3ec;
+border-radius:8px;
+font-size:14px;
+}
+
+.contact-form textarea{
+resize:none;
+}
+
+.contact-form button{
+margin-top:20px;
+padding:10px 20px;
+border:none;
+border-radius:25px;
+background:var(--hero-main);
+color:white;
+cursor:pointer;
+font-size:14px;
+transition:.25s;
+}
+
+.contact-form button:hover{
+background:#1f4fa3;
+}
+
+/* Contact Details */
+
+.contact-details{
+padding:30px;
+background:white;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.contact-details h2{
+font-family:"Jost",sans-serif;
+margin-bottom:18px;
+}
+
+.contact-details p{
+line-height:1.6;
+margin-bottom:16px;
+font-size:14px;
+}
+
+.contact-details a{
+color:var(--hero-main);
+text-decoration:none;
+}
+
+.contact-note{
+font-size:13px;
+color:#666;
+}
+
+/* Google Map */
+
+.map-container{
+
+max-width:650px;
+
+margin:30px auto;
+
+border-radius:16px;
+
+overflow:hidden;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+
+}
+
+.map-container iframe{
+width:100%;
+height:320px;
+border:0;
+}
+
+/* Responsive */
+
+@media (max-width:900px){
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+.section-grey h2{
+
+text-align:center;
+
+margin-bottom:20px;
+
+} 
+
+/* INPUT GROUP */
+
+.input-group{
+position:relative;
+margin-bottom:16px;
+}
+
+/* ICON */
+
+.input-icon{
+position:absolute;
+left:12px;
+top:50%;
+transform:translateY(-50%);
+font-size:16px;
+opacity:0.6;
+}
+
+/* INPUT FIELD */
+
+.input-group input,
+.input-group textarea{
+
+width:100%;
+
+padding:11px 12px 11px 38px;
+
+border-radius:8px;
+
+border:1px solid #e4e9f2;
+
+background:#f9fbff;
+
+font-size:14px;
+
+transition:all .2s ease;
+
+}
+
+/* REMOVE DARK BORDER FEEL */
+
+.input-group input:focus,
+.input-group textarea:focus{
+
+outline:none;
+
+border-color:var(--hero-main);
+
+background:white;
+
+box-shadow:0 0 0 2px rgba(44,110,213,0.12);
+
+}
+
+/* TEXTAREA ICON ALIGNMENT */
+
+.textarea-group .input-icon{
+top:18px;
+transform:none;
+}
+
+.contact-btn{
+
+margin-top:14px;
+
+padding:10px 22px;
+
+border:none;
+
+border-radius:24px;
+
+background:var(--hero-main);
+
+color:white;
+
+font-size:14px;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+/* yellow hover */
+
+.contact-btn:hover{
+
+background:#f4c430;
+
+color:#222;
+
+}
+
+
+.form-success{
+margin-top:12px;
+color:green;
+font-size:14px;
+}
+
+.form-error{
+margin-top:12px;
+color:red;
+font-size:14px;
+}
+
+.spinner{
+width:18px;
+height:18px;
+border:2px solid white;
+border-top:2px solid transparent;
+border-radius:50%;
+display:inline-block;
+animation:spin 0.6s linear infinite;
+}
+
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+
+.input-group input,
+.input-group textarea{
+  color:#000;   /* ⭐ text typing color */
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+  color:#888;   /* optional softer placeholder */
+}
+
+.toast{
+position: fixed;
+
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);  /* ⭐ perfect centering */
+
+background: white;
+padding: 16px 24px;
+border-radius: 12px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+font-size: 14px;
+font-weight: 500;
+z-index: 9999;
+/* animation */
+animation: fadeInScale 0.3s ease;
+}
+
+/* success */
+.toast.success{
+color: green;
+}
+
+/* error */
+.toast.error{
+color: red;
+}
+
+/* animation */
+@keyframes fadeInScale{
+from{
+opacity:0;
+transform: translate(-50%, -60%) scale(0.9);
+}
+to{
+opacity:1;
+transform: translate(-50%, -50%) scale(1);
+}
+}

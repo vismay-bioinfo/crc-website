@@ -1,0 +1,224 @@
+/* ================= GLOBAL ================= */
+
+.training-text{
+max-width:900px;
+margin:auto;
+}
+
+.training-text p{
+line-height:1.75;
+margin-bottom:18px;
+text-align:justify;
+}
+
+/* ================= HERO ================= */
+
+.training-hero{
+padding:90px 20px;
+text-align:center;
+background:linear-gradient(135deg,#eef2fa,#f8faff);
+border-bottom:1px solid #e5eaf3;
+}
+
+.training-hero h1{
+font-family:"Jost",sans-serif;
+font-size:42px;
+margin-bottom:16px;
+color:var(--hero-main);
+}
+
+.training-hero p{
+max-width:850px;
+margin:auto;
+line-height:1.7;
+color:#555;
+font-size:16px;
+text-align: justify;
+}
+
+/* ================= SECTION HEADINGS ================= */
+
+.section h2{
+font-family:"Jost",sans-serif;
+font-size:30px;
+text-align:center;
+margin-bottom:20px;
+}
+
+/* ================= FELLOWS GRID ================= */
+
+.fellows-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;   /* ⭐ centers ALL rows including last */
+gap:28px;
+max-width:1000px;
+margin:40px auto 0;
+padding:0 20px;
+}
+
+/* ================= FELLOW CARD ================= */
+
+.fellow-card{
+flex: 0 1 280px;   /* ⭐ fixed card width */
+max-width:280px;
+background:white;
+padding:22px 20px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 8px 24px rgba(0,0,0,0.05);
+transition:all .25s ease;
+animation:fadeUp .6s ease;
+display:flex;
+flex-direction:column;
+}
+
+.fellow-card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 34px rgba(0,0,0,0.08);
+}
+
+/* ================= FELLOW PHOTO ================= */
+
+.fellow-card img{
+width:100%;
+height:160px;
+object-fit:contain;
+background:#f5f7fb;
+border-radius:12px;
+padding:10px;
+}
+
+/* ================= FELLOW TEXT ================= */
+
+.fellow-card h3{
+font-family:"Jost",sans-serif;
+font-size:17px;
+margin-bottom:6px;
+}
+
+.fellow-role{
+font-size:13px;
+font-weight:600;
+color:var(--hero-main);
+margin-bottom:10px;
+}
+
+.fellow-bio{
+font-style:italic;
+font-size:14px;
+line-height:1.6;
+color:#555;
+margin-top:auto;   /* ⭐ pushes content nicely */
+}
+
+
+
+/* ================= TABLE TITLE ================= */
+
+.table-title{
+font-family:"Jost",sans-serif;
+font-size:22px;
+margin-top:50px;
+margin-bottom:12px;
+}
+
+/* ================= TABLE ================= */
+
+.training-table{
+width:90%;
+max-width: 900px;
+border-collapse:collapse;
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+margin-bottom:30px;
+text-align: center;
+margin: 20px auto 30px;
+}
+
+/* HEADER */
+
+.training-table th{
+background:#f3f6fb;
+padding:12px;
+font-family:"Jost",sans-serif;
+font-weight:600;
+text-align:left;
+border-bottom:1px solid #e6ebf3;
+text-align: center;
+}
+
+/* CELLS */
+
+.training-table td{
+padding:12px;
+border-top:1px solid #edf1f7;
+font-size:14px;
+text-align: center;
+}
+
+/* ROW HOVER */
+
+.training-table tbody tr:hover{
+background:#f4f7ff;
+transform:scale(1.01);
+transition:.2s ease;
+}
+
+/* ================= FADE ANIMATION ================= */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(10px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:900px){
+
+.training-hero h1{
+font-size:34px;
+}
+
+.fellows-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.fellow-card img{
+height:200px;
+}
+
+}
+
+
+
+@media (max-width:600px){
+
+.training-hero{
+padding:70px 20px;
+}
+
+.fellows-grid{
+grid-template-columns:1fr;
+}
+
+.training-hero h1{
+font-size:30px;
+}
+
+.section h2{
+font-size:26px;
+}
+
+}

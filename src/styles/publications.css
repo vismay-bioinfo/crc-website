@@ -1,0 +1,241 @@
+/* ================= PAGE TITLE ================= */
+
+.publications-container h1{
+font-family:"Jost",sans-serif;
+font-size:40px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.publications-intro{
+max-width:900px;
+margin:auto;
+line-height:1.75;
+text-align:justify;
+color:#555;
+margin-bottom:40px;
+}
+
+
+/* ================= YEAR BLOCK ================= */
+
+.year-block{
+margin-bottom:60px;
+}
+
+.year-title{
+font-family:"Jost",sans-serif;
+font-size:28px;
+margin-bottom:24px;
+color:var(--hero-main);
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.year-count{
+font-size:16px;
+color:#777;
+font-weight:400;
+}
+
+
+/* ================= PAPER GRID ================= */
+
+.papers-list{
+display:grid;
+grid-template-columns:1fr;
+gap:18px;
+max-width:900px;
+margin:auto;
+}
+
+
+/* ================= PAPER CARD ================= */
+
+.paper-card{
+background:white;
+padding:18px;
+border-radius:16px;
+border:1px solid #e8ecf3;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+transition:all .25s ease;
+position:relative;
+overflow:hidden;
+text-align:center;  /* center all */
+}
+
+/* accent bar */
+
+.paper-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+height:100%;
+
+width:4px;
+
+background:var(--hero-main);
+
+}
+
+
+/* hover */
+
+.paper-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
+
+}
+
+
+/* ================= TITLE ================= */
+
+.paper-title{
+font-size:16px;
+font-weight:600;
+margin-bottom:8px;
+line-height:1.5;
+text-align:center;   /* ⭐ keeps readability */
+}
+
+
+/* ================= AUTHORS ================= */
+
+.paper-authors{
+
+font-size:14px;
+
+color:#666;
+
+margin-bottom:6px;
+text-align: center;
+
+}
+
+
+/* ================= JOURNAL ================= */
+
+.paper-journal{
+
+font-size:14px;
+
+color:#444;
+
+font-style:italic;
+
+margin-bottom:10px;
+text-align: center;
+
+}
+
+
+/* ================= LINKS ================= */
+
+.paper-links{
+
+display:flex;
+
+gap:10px;
+justify-content: center;
+
+}
+
+.paper-links a{
+
+font-size:13px;
+padding:5px 12px;
+border-radius:20px;
+background:#eef2fa;
+color:var(--hero-main);
+text-decoration:none;
+font-weight:500;
+transition:all .2s ease;
+
+}
+
+.paper-links a:hover{
+
+background:var(--hero-main);
+
+color:white;
+
+}
+
+
+/* ================= BUTTON ================= */
+
+.view-more-btn{
+
+margin-top:20px;
+
+padding:8px 16px;
+
+border:none;
+
+border-radius:25px;
+
+background:var(--hero-main);
+
+color:white;
+
+font-size:14px;
+
+cursor:pointer;
+
+transition:all .25s ease;
+
+}
+
+.view-more-btn:hover{
+
+background:#1f4fa3;
+
+}
+
+
+/* ================= ANIMATION ================= */
+
+.paper-card{
+
+animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(15px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+.paper-title{
+font-size:15px;
+}
+
+}
+/* FORCE CENTER INSIDE CARD */
+.paper-card > p,
+.paper-card > h3{
+text-align:center !important;
+}

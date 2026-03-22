@@ -1,0 +1,262 @@
+.about-container{
+  max-width:900px;
+}
+
+.about-container p{
+  margin-bottom:18px;
+  line-height:1.75;
+  text-align:justify;
+}
+
+.about-container h1{
+  margin-bottom:18px;
+  line-height:1.75;
+  text-align:center;
+  font-family:"Jost",sans-serif;
+font-size:40px;
+
+
+}
+
+
+/* ================= SAB ================= */
+
+.sab-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(260px, 320px));
+gap:24px;
+justify-content:center;   /* ⭐ important */
+max-width:900px;
+margin:40px auto 0;
+}
+
+/* CARD */
+
+.sab-card{
+
+background:white;
+
+padding:20px 18px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+
+transition:all .25s ease;
+
+}
+
+/* hover */
+
+.sab-card:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
+}
+
+/* NAME */
+
+.sab-card h3{
+
+font-family:"Jost",sans-serif;
+
+font-size:18px;
+
+margin-bottom:6px;
+
+}
+
+/* ROLE */
+
+.sab-role{
+
+font-size:15px;
+
+font-weight:600;
+
+color:var(--hero-main);
+
+margin-bottom:4px;
+
+}
+
+/* TEXT LINES */
+
+.sab-card p{
+
+font-size:14px;
+
+line-height:1.35;
+
+margin:2px 0;
+
+text-align:center;
+
+}
+
+/* LOCATION */
+
+.sab-location{
+color:var(--text-muted);
+}
+/* ================= COLLABORATORS ================= */
+
+.collab-group{
+margin-top:60px;
+text-align:center;
+}
+
+.collab-inst{
+font-family:"Jost",sans-serif;
+font-size:26px;
+margin-bottom:30px;
+color:var(--hero-main);
+}
+
+/* GRID */
+
+.collab-people{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(260px, 260px)); /* ⭐ key fix */
+gap:20px;
+justify-content:center;   /* ⭐ centers rows */
+max-width:1100px;
+margin:0 auto;
+}
+/* CARD */
+
+.person-card{
+
+background:white;
+width: 100%;
+padding:18px 14px;
+
+border-radius:18px;
+
+border:1px solid #e8ecf3;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+
+transition:all .25s ease;
+border-top:4px solid #ece6f7;
+border-left:1px solid #ece6f7;
+border-right:1px solid #ece6f7;
+border-bottom:1px solid #ece6f7;
+margin: 0 auto;
+flex: 0 1 260px;   /* ⭐ fixed width */
+max-width:260px;
+}
+
+
+.aim-grid{
+max-width:900px;
+margin:40px auto 0;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.aim-card{
+display:flex;
+gap:20px;
+align-items:flex-start;
+background:white;
+padding:20px 22px;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+transition:.25s;
+border-left:4px solid var(--hero-main);
+}
+
+.aim-card:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
+}
+
+.aim-card span{
+min-width:36px;
+height:36px;
+border-radius:50%;
+background:var(--hero-main);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+font-size:16px;
+}
+.aim-card p{
+margin:0;
+line-height:1.6;
+text-align:left;
+}
+
+
+.workflow-image{
+display:block;
+max-width:900px;
+width:100%;
+margin:30px auto;
+border-radius:16px;
+box-shadow:0 8px 28px rgba(0,0,0,0.08);
+transition:.35s ease;
+cursor:pointer;
+}
+
+.workflow-image:hover{
+transform:scale(1.03);
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* hover */
+
+.person-card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
+border-color:#d6def0;
+}
+
+/* NAME */
+
+.person-card h4{
+font-size:17px;
+margin-bottom:6px;
+}
+
+/* ROLE */
+
+.person-role{
+font-size:15px;
+font-weight:600;
+color:var(--hero-main);
+}
+
+/* TEXT */
+
+.person-card p{
+font-size:14px;
+line-height:1.5;
+margin:3px 0;
+text-align:center;
+}
+
+/* LOCATION */
+
+.person-location{
+color:var(--text-muted);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1100px){
+.collab-people{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:600px){
+.collab-people{
+grid-template-columns:1fr;
+}
+}
