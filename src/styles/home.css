@@ -100,7 +100,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: relative;
   gap: clamp(12px, 1.5vw, 18px);
 
   max-width: 900px;
@@ -167,6 +167,22 @@ body {
   width: 100%;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  font-weight: bold;
+
+  background: white;
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  padding: 6px 10px;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 /* LONG NAV TAB */
 
 .two-line {
@@ -487,6 +503,11 @@ pointer-events:none;
     height: 46px;
   }
 
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
 }
 /* ================================= */
 /* VIRTUAL CENTRES GRID */
@@ -948,4 +969,56 @@ z-index:-1;
 @keyframes badgeGlow{
 from{ box-shadow: 0 0 10px rgba(255,255,255,0.2); }
 to{ box-shadow: 0 0 25px rgba(140, 100, 255, 0.6); }
+}
+
+
+@media (max-width: 768px) {
+
+  /* SHOW HAMBURGER */
+  .menu-toggle {
+    display: block;
+    margin: auto;
+    justify-self: center;
+  }
+
+  /* HIDE LINKS INITIALLY */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+
+    background: white;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.3s ease;
+  }
+
+  /* OPEN MENU */
+  .nav-links.open {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+
+  /* KEEP BOTH LOGOS */
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+   .navbar {
+    grid-template-columns: max-content auto max-content;
+  }
+
 }
