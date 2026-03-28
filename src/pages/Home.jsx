@@ -476,7 +476,7 @@ Know more about collaborators
       </div>
 
       <div className="gallery-slide">
-        <img src="/gallery/Gallery_3.JPG" alt="Team"/>
+        <img src="/gallery/Gallery_3.png" alt="Team"/>
         <p className="gallery-caption">Collaborating institutions meeting</p>
       </div>
 
