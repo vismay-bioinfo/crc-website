@@ -476,12 +476,12 @@ Know more about collaborators
       </div>
 
       <div className="gallery-slide">
-        <img src="/gallery/Gallery_3.jpg" alt="Team"/>
+        <img src="/gallery/Gallery_3.JPG" alt="Team"/>
         <p className="gallery-caption">Collaborating institutions meeting</p>
       </div>
 
       <div className="gallery-slide">
-        <img src="/gallery/Gallery_4.jpg" alt="Lab"/>
+        <img src="/gallery/Gallery_4.jpeg" alt="Lab"/>
         <p className="gallery-caption">DRILS team from Dr. Aarti Sevilimedu’s laboratory, Center for Rare Disease Models, DRILS, Hyderabad</p>
       </div>
 
