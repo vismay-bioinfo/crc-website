@@ -516,6 +516,9 @@ pointer-events:none;
   gap:40px;
   align-items:center;
   margin-top:50px;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* HUB IMAGE */
@@ -616,7 +619,7 @@ pointer-events:none;
 }
 
 .primary-btn{
-  display:block;
+  display:inline-block;
   margin:40px auto 0 auto;
 }
 
@@ -1023,4 +1026,14 @@ to{ box-shadow: 0 0 25px rgba(140, 100, 255, 0.6); }
     grid-template-columns: max-content auto max-content;
   }
 
+}
+
+@media (min-width: 1440px) {
+  .nav-center a {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+  .nav-center {
+    gap: 20px;
+  }
 }
