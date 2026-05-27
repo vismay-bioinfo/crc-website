@@ -189,57 +189,56 @@ export default function Home() {
 {/* VIRTUAL CENTRES */}
 
 <section className="section section-light">
+  <div className="container">
+    <h2>Virtual Centres</h2>
 
-<h2>Virtual Centres</h2>
+    <div className="collab-grid">
 
-<div className="collab-grid">
+      {/* HUB */}
+      <div className="collab-hub">
+        <img src="/collab/collab1.jpg" alt="CRC collaboration hub"/>
+      </div>
 
-  {/* HUB */}
-  <div className="collab-hub">
-    <img src="/collab/collab1.jpg" alt="CRC collaboration hub"/>
-  </div>
+      {/* MAHE */}
+      <div className="collab-card collab-mahe">
+        <div className="card-header">
+          <h3>Manipal Academy of Higher Education (MAHE), Manipal</h3>
+          <img className="inst-logo" src="/logos/mahe-logo.png" alt="MAHE logo"/>
+        </div>
 
-  {/* MAHE */}
-  <div className="collab-card">
-    <div className="card-header">
-      <h3>Manipal Academy of Higher Education (MAHE), Manipal</h3>
-      <img className="inst-logo" src="/logos/mahe-logo.png" alt="MAHE logo"/>
+        <p>
+        Established in 1953, MAHE is a multidisciplinary deemed-to-be university and an Institution of Eminence, with strengths across health sciences, engineering, management, and the social sciences. The Department of Medical Genetics at Kasturba Medical College, MAHE focuses on advancing clinical diagnosis and research in rare genetic disorders. The department provides clinical evaluation, genomic testing, genetic counselling, and management services for patients and families, contributing to both care and research.
+        </p>
+      </div>
+
+
+      {/* IOB */}
+      <div className="collab-card collab-iob">
+        <div className="card-header">
+          <h3>Institute of Bioinformatics (IOB), Bengaluru</h3>
+          <img className="inst-logo" src="/logos/iob-logo.png" alt="IOB logo"/>
+        </div>
+
+        <p>
+        Established in 2002, the IOB is a pioneering not-for-profit research organization driving excellence in computational and systems biology. IOB conducts cutting-edge research across genomics, proteomics, metabolomics, lipidomics, and bioinformatics database development. Through interdisciplinary innovation and large-scale data integration, the institute strengthens India’s global position in precision biology and data-driven biomedical discovery.
+        </p>
+      </div>
+
+
+      {/* DRILS */}
+      <div className="collab-card collab-drils">
+        <div className="card-header">
+          <h3>Dr. Reddy’s Institute of Life Sciences (DRILS), Hyderabad</h3>
+          <img className="inst-logo" src="/logos/drils-logo.png" alt="DRILS logo"/>
+        </div>
+
+        <p>
+        Founded in 2007, DRILS is a premier non-profit research institute established through a public–private partnership among Dr. Reddy’s Laboratories, the Government of Telangana, and the University of Hyderabad. Guided by a board of eminent scientists, DRILS fosters high-impact research at the interface of academia and industry. It serves as a preferred collaborative partner for the pharmaceutical and life sciences sectors, advancing innovation, translation, and capacity building in biomedical research.
+        </p>
+      </div>
+
     </div>
-
-    <p>
-    Established in 1953, MAHE is a multidisciplinary deemed-to-be university and an Institution of Eminence, with strengths across health sciences, engineering, management, and the social sciences. The Department of Medical Genetics at Kasturba Medical College, MAHE focuses on advancing clinical diagnosis and research in rare genetic disorders. The department provides clinical evaluation, genomic testing, genetic counselling, and management services for patients and families, contributing to both care and research.
-    </p>
   </div>
-
-
-  {/* IOB */}
-  <div className="collab-card">
-    <div className="card-header">
-      <h3>Institute of Bioinformatics (IOB), Bengaluru</h3>
-      <img className="inst-logo" src="/logos/iob-logo.png" alt="IOB logo"/>
-    </div>
-
-    <p>
-    Established in 2002, the IOB is a pioneering not-for-profit research organization driving excellence in computational and systems biology. IOB conducts cutting-edge research across genomics, proteomics, metabolomics, lipidomics, and bioinformatics database development. Through interdisciplinary innovation and large-scale data integration, the institute strengthens India’s global position in precision biology and data-driven biomedical discovery.
-    </p>
-  </div>
-
-
-  {/* DRILS */}
-  <div className="collab-card">
-    <div className="card-header">
-      <h3>Dr. Reddy’s Institute of Life Sciences (DRILS), Hyderabad</h3>
-      <img className="inst-logo" src="/logos/drils-logo.png" alt="DRILS logo"/>
-    </div>
-
-    <p>
-    Founded in 2007, DRILS is a premier non-profit research institute established through a public–private partnership among Dr. Reddy’s Laboratories, the Government of Telangana, and the University of Hyderabad. Guided by a board of eminent scientists, DRILS fosters high-impact research at the interface of academia and industry. It serves as a preferred collaborative partner for the pharmaceutical and life sciences sectors, advancing innovation, translation, and capacity building in biomedical research.
-    </p>
-  </div>
-
-</div>
-
-
 </section>
 
 {/* LEADERSHIP */}

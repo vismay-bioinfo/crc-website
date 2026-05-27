@@ -562,17 +562,17 @@ pointer-events:none;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
-.collab-card:nth-of-type(2){
+.collab-card.collab-mahe {
   background:#f0faf5; /* MAHE: Soft mint green */
   border-top: 4px solid #16A34A;
 }
 
-.collab-card:nth-of-type(3){
+.collab-card.collab-iob {
   background:#f0f4fc; /* IOB: Soft academic blue */
   border-top: 4px solid #2b6cb0;
 }
 
-.collab-card:nth-of-type(4){  
+.collab-card.collab-drils {  
   background:#f6f0fa; /* DRILS: Soft medical purple */
   border-top: 4px solid #805ad5;
 }
@@ -1073,22 +1073,28 @@ to{ box-shadow: 0 0 25px rgba(140, 100, 255, 0.6); }
 
 @media (min-width: 1440px) {
   body {
-    font-size: 17px;
+    font-size: 19px !important;
   }
   .container {
     max-width: 1300px;
   }
   .section h2 {
-    font-size: 38px;
+    font-size: 42px !important;
   }
   .nav-center a {
-    font-size: 15px;
-    padding: 6px 12px;
+    font-size: 17px !important;
+    padding: 6px 14px !important;
   }
   .nav-center {
-    gap: 20px;
+    gap: 25px !important;
   }
   .stat-number {
-    font-size: 38px;
+    font-size: 42px !important;
+  }
+  .collab-card p {
+    font-size: 16px !important;
+  }
+  .leader-card p {
+    font-size: 16px !important;
   }
 }
