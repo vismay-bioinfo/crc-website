@@ -222,3 +222,42 @@ font-size:26px;
 }
 
 }
+
+/* ================= DESKTOP TYPOGRAPHY (min-width: 1440px) ================= */
+
+@media (min-width: 1440px) {
+  .training-hero h1 {
+    font-size: 48px !important;
+  }
+  .training-hero p {
+    font-size: 19px !important;
+    line-height: 1.8 !important;
+  }
+  .training-text p {
+    font-size: 19px !important;
+    line-height: 1.8 !important;
+  }
+  .section h2 {
+    font-size: 38px !important;
+  }
+  .table-title {
+    font-size: 26px !important;
+  }
+  .training-table th {
+    font-size: 18px !important;
+    padding: 16px !important;
+  }
+  .training-table td {
+    font-size: 17px !important;
+    padding: 16px !important;
+  }
+  .fellow-card h3 {
+    font-size: 20px !important;
+  }
+  .fellow-role {
+    font-size: 16px !important;
+  }
+  .fellow-bio {
+    font-size: 16px !important;
+  }
+}

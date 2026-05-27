@@ -62,7 +62,7 @@ export default function Publications() {
 
 
       {/* Publications List */}
-      <section className="section section-lighy">
+      <section className="section section-light">
 
         <div className="container">
 

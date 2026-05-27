@@ -153,10 +153,7 @@ CRTP Fellow & PhD Scholar, Institute of Bioinformatics
 </p>
 
 <p className="fellow-bio">
-CRTP Fellow & PhD Scholar, Institute of Bioinformatics, Bangalore
-A medical biochemist from the Lady Hardinge Medical College (LHMC), New Delhi, Dr. Janani's doctoral research focuses on applying mass spectrometry-based approaches to 
-characterize inherited metabolic disorders.
-
+A medical biochemist from the Lady Hardinge Medical College (LHMC), New Delhi, Dr. Janani's doctoral research focuses on applying mass spectrometry-based approaches to characterize inherited metabolic disorders.
 </p>
 
 </div>
@@ -408,7 +405,6 @@ diagnosis.
 <tr><td>Ms. Divya Deepak Jamdar</td><td>2024</td><td>Present</td><td>DRILS</td></tr>
 <tr><td>Ms. Senjuti Sengupta</td><td>2023</td><td>2024</td><td>DRILS</td></tr>
 <tr><td>Ms. Hamsini Sekhar</td><td>2022</td><td>2025</td><td>DRILS</td></tr>
-<tr><td>Ms. Hamsini Sekar</td><td>2022</td><td>2024</td><td>DRILS</td></tr>
 <tr><td>Ms. Atchaya R</td><td>2021</td><td>2022</td><td>DRILS</td></tr>
 
 </tbody>

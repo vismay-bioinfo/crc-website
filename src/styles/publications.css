@@ -239,3 +239,21 @@ font-size:15px;
 .paper-card > h3{
 text-align:center !important;
 }
+
+@media (min-width: 1440px) {
+  .publications-container h1 {
+    font-size: 48px !important;
+  }
+  .year-title {
+    font-size: 34px !important;
+  }
+  .paper-title {
+    font-size: 19px !important;
+  }
+  .paper-authors {
+    font-size: 16px !important;
+  }
+  .paper-journal {
+    font-size: 16px !important;
+  }
+}
