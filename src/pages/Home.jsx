@@ -152,12 +152,12 @@ export default function Home() {
     <div className="stats-grid">
 
       <div className="stat-card">
-        <div className="stat-number" data-target="1250" data-suffix="+">0</div>
+        <div className="stat-number" data-target="1368" data-suffix="+">0</div>
         <p>Families Recruited</p>
       </div>
 
       <div className="stat-card">
-        <div className="stat-number" data-target="63" data-suffix="%">0</div>
+        <div className="stat-number" data-target="53.6" data-suffix="%">0</div>
         <p>Diagnostic Yield</p>
       </div>
 
@@ -172,12 +172,12 @@ export default function Home() {
       </div>
 
       <div className="stat-card">
-        <div className="stat-number" data-target="1131">0</div>
+        <div className="stat-number" data-target="1512">0</div>
         <p>Affected Individuals</p>
       </div>
 
       <div className="stat-card">
-        <div className="stat-number" data-target="500" data-suffix="+">0</div>
+        <div className="stat-number" data-target="600" data-suffix="+">0</div>
         <p>ClinVar Submissions</p>
       </div>
 
