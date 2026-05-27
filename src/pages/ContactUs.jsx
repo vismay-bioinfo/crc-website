@@ -72,6 +72,8 @@ const handleSubmit = (e) => {
 })
   .catch(() => {
     setStatus("error");
+    setToast("error");
+    setTimeout(() => setToast(null), 3000);
   })
   .finally(() => {
     setLoading(false);
@@ -111,12 +113,12 @@ const handleSubmit = (e) => {
                   <div className="input-group">
                     <span className="input-icon">👤</span>
                     <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Full Name"
-                      required
+                       type="text"
+                       name="name"
+                       value={formData.name}
+                       onChange={handleChange}
+                       placeholder="Full Name"
+                       required
                     />
                   </div>
 
@@ -151,6 +153,7 @@ const handleSubmit = (e) => {
                     onChange={handleChange}
                     rows="5"
                     placeholder="Message"
+                    required
                   />
                 </div>
 

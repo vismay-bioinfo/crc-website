@@ -354,3 +354,45 @@ opacity:1;
 transform: translate(-50%, -50%) scale(1);
 }
 }
+
+/* ================= DESKTOP TYPOGRAPHY (min-width: 1440px) ================= */
+
+@media (min-width: 1440px) {
+  .contact-container h1 {
+    font-size: 48px !important;
+  }
+  .contact-intro {
+    font-size: 19px !important;
+    line-height: 1.8 !important;
+  }
+  .contact-form h2,
+  .contact-details h2 {
+    font-size: 28px !important;
+  }
+  .form-intro {
+    font-size: 16px !important;
+  }
+  .input-group input,
+  .input-group textarea {
+    font-size: 16px !important;
+    padding: 14px 14px 14px 44px !important;
+  }
+  .input-icon {
+    font-size: 18px !important;
+    left: 16px !important;
+  }
+  .textarea-group .input-icon {
+    top: 20px !important;
+  }
+  .contact-btn {
+    font-size: 16px !important;
+    padding: 12px 28px !important;
+  }
+  .contact-details p {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+  }
+  .map-container iframe {
+    height: 450px !important;
+  }
+}
