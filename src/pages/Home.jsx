@@ -114,7 +114,7 @@ export default function Home() {
 
       {/* REGISTRY BANNER */}
       <section className="registry-banner">
-        🟢 CRC Registry – Launching Soon
+        <span className="pulsing-dot"></span> CRC Registry – Launching Soon
       </section>
 
       {/* ABOUT SECTION */}
