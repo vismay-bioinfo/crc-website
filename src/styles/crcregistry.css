@@ -244,3 +244,32 @@ font-size:28px;
 }
 
 }
+
+/* ================= DESKTOP TYPOGRAPHY (min-width: 1440px) ================= */
+
+@media (min-width: 1440px) {
+  .registry-banner h1 {
+    font-size: 48px !important;
+  }
+  .registry-banner p {
+    font-size: 19px !important;
+  }
+  .registry-container p {
+    font-size: 19px !important;
+    line-height: 1.8 !important;
+  }
+  .section h2 {
+    font-size: 38px !important;
+  }
+  .registry-card {
+    font-size: 22px !important;
+    padding: 34px 24px !important;
+  }
+  .ethics-card h3 {
+    font-size: 22px !important;
+  }
+  .ethics-card p {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+  }
+}

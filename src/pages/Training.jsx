@@ -421,7 +421,7 @@ diagnosis.
 
 <thead>
 <tr>
-<th>Name*</th>
+<th>Name</th>
 <th>Year of Joining</th>
 <th>Year of Relieving</th>
 <th>Institute</th>
