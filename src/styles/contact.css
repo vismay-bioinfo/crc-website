@@ -110,7 +110,8 @@ transition:.25s;
 }
 
 .contact-form button:hover{
-background:#1f4fa3;
+background:#f4c430;
+color:#222;
 }
 
 /* Contact Details */

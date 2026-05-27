@@ -20,7 +20,25 @@ margin-bottom:40px;
 /* ================= YEAR BLOCK ================= */
 
 .year-block{
-margin-bottom:60px;
+padding:30px;
+border-radius:20px;
+margin-bottom:40px;
+border:1px solid #eef2f6;
+box-shadow:0 4px 18px rgba(0,0,0,0.02);
+transition:all .25s ease;
+}
+
+.year-block:hover {
+  transform:translateY(-2px);
+  box-shadow:0 8px 28px rgba(0,0,0,0.04);
+}
+
+.year-even {
+  background:#f7f9fd;
+}
+
+.year-odd {
+  background:#ffffff;
 }
 
 .year-title{
@@ -164,9 +182,9 @@ transition:all .2s ease;
 
 .paper-links a:hover{
 
-background:var(--hero-main);
+background:#f4c430;
 
-color:white;
+color:#222;
 
 }
 
@@ -197,7 +215,9 @@ transition:all .25s ease;
 
 .view-more-btn:hover{
 
-background:#1f4fa3;
+background:#f4c430;
+
+color:#222;
 
 }
 

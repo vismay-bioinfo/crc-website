@@ -66,7 +66,7 @@ export default function Publications() {
 
         <div className="container">
 
-          {sortedYears.map((year) => {
+          {sortedYears.map((year, index) => {
 
             const papers = groupByYear[year];
             const expanded = expandedYears[year];
@@ -74,7 +74,7 @@ export default function Publications() {
 
             return (
 
-              <div key={year} className="year-block">
+              <div key={year} className={`year-block ${index % 2 === 0 ? "year-even" : "year-odd"}`}>
 
                 <h2 className="year-title">
                   {year}
