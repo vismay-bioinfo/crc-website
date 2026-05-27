@@ -1,18 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/home.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
+const SLIDES_DATA = [
+  { img: "/gallery/Gallery_1.jpg", alt: "Workshop", caption: "IOB and DRILS team visit to MAHE, Manipal" },
+  { img: "/gallery/Gallery_2.jpg", alt: "Research", caption: "IOB team visit to MAHE, Manipal" },
+  { img: "/gallery/Gallery_3.png", alt: "Team", caption: "Collaborating institutions meeting" },
+  { img: "/gallery/Gallery_4.jpeg", alt: "Lab", caption: "DRILS team from Dr. Aarti Sevilimedu’s laboratory, Center for Rare Disease Models, DRILS, Hyderabad" },
+  { img: "/gallery/Gallery_5.jpg", alt: "Conference", caption: "CRC team at Manipal during the 11th Annual Conference of the SMRM on Mitochondria in Health, Disease and Ageing" },
+  { img: "/gallery/Gallery_6.jpg", alt: "Team", caption: "Dr. Anju Shukla’s visit to DRILS, Hyderabad" },
+  { img: "/gallery/Gallery_7.jpeg", alt: "Team", caption: "IOB team visit to MAHE" },
+  { img: "/gallery/Gallery_8.jpeg", alt: "Team", caption: "Dr. Anju Shukla and Dr. Aarti Sevilimedu at the 12th DBT/WT India Alliance Conclave, Hyderabad" }
+];
+
 export default function Home() {
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+
   useEffect(() => {
-
     /* ================= COUNTER ================= */
-
     const counters = document.querySelectorAll(".stat-number");
 
     const startCounter = (counter) => {
-
       const target = +counter.getAttribute("data-target");
       const suffix = counter.getAttribute("data-suffix") || "";
 
@@ -20,162 +33,64 @@ export default function Home() {
       const increment = target / 80;
 
       const update = () => {
-
         count += increment;
 
         if (count < target) {
-          counter.innerText =
-            Math.floor(count).toLocaleString() + suffix;
+          counter.innerText = Math.floor(count).toLocaleString() + suffix;
           requestAnimationFrame(update);
         } else {
-          counter.innerText =
-            target.toLocaleString() + suffix;
+          counter.innerText = target.toLocaleString() + suffix;
         }
-
       };
 
       update();
     };
 
     const observer = new IntersectionObserver((entries, obs) => {
-
       entries.forEach(entry => {
-
         if (entry.isIntersecting) {
           startCounter(entry.target);
           obs.unobserve(entry.target);
         }
-
       });
-
     }, { threshold: 0.6 });
 
     counters.forEach(counter => {
       observer.observe(counter);
     });
 
-
-    /* ================= GALLERY ================= */
-
-    const slides = document.querySelectorAll(".gallery-slide");
-    const dotsContainer = document.querySelector(".gallery-dots");
-    const wrapper = document.querySelector(".gallery-wrapper");
-
-    if (!slides.length || !dotsContainer || !wrapper) return;
-
-    let currentSlide = 0;
-    let interval;
-
-    function showSlide(index) {
-  slides.forEach((slide, i) => {
-
-    slide.classList.remove("active");
-    dotsContainer.children[i]?.classList.remove("active");
-
-    if (i === index) {
-      slide.classList.add("active");
-      dotsContainer.children[i]?.classList.add("active");
-    }
-
-  });
-}
-
-    function nextSlide() {
-
-      currentSlide++;
-
-      if (currentSlide >= slides.length) {
-        currentSlide = 0;
-      }
-
-      showSlide(currentSlide);
-
-    }
-
-    function prevSlide() {
-
-      currentSlide--;
-
-      if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
-      }
-
-      showSlide(currentSlide);
-
-    }
-
-
-/* CREATE DOTS */
-
-    // ⭐ CLEAR FIRST (ONLY ONCE)
-    dotsContainer.innerHTML = "";
-
-    slides.forEach((_, i) => {
-      const dot = document.createElement("span");
-
-      dot.classList.add("gallery-dot");
-
-      if (i === 0) dot.classList.add("active");
-
-      dot.addEventListener("click", () => {
-        currentSlide = i;
-        showSlide(currentSlide);
-      });
-
-      dotsContainer.appendChild(dot);
-    });
-
-    /* BUTTON EVENTS */
-
-    document.querySelector(".gallery-next")?.addEventListener("click", nextSlide);
-    document.querySelector(".gallery-prev")?.addEventListener("click", prevSlide);
-
-
-    /* AUTO SLIDE */
-
-    function startSlider() {
-      interval = setInterval(nextSlide, 5000);
-    }
-
-    function stopSlider() {
-      clearInterval(interval);
-    }
-
-    startSlider();
-
-
-    /* PAUSE ON HOVER */
-
-    wrapper.addEventListener("mouseenter", stopSlider);
-    wrapper.addEventListener("mouseleave", startSlider);
-
-
-    /* MOBILE SWIPE */
-
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    wrapper.addEventListener("touchstart", e => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    wrapper.addEventListener("touchend", e => {
-
-      touchEndX = e.changedTouches[0].screenX;
-
-      if (touchStartX - touchEndX > 50) nextSlide();
-      if (touchEndX - touchStartX > 50) prevSlide();
-
-    });
-
-
-    /* CLEANUP */
-
+    /* CLEANUP OBSERVATION */
     return () => {
-      clearInterval(interval);
+      observer.disconnect();
     };
-
   }, []);
+
+  /* ================= DECLARATIVE GALLERY TIMER ================= */
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % SLIDES_DATA.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [isPaused]);
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % SLIDES_DATA.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + SLIDES_DATA.length) % SLIDES_DATA.length);
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.changedTouches[0].screenX);
+  };
+
+  const handleTouchEnd = (e) => {
+    const touchEnd = e.changedTouches[0].screenX;
+    if (touchStart - touchEnd > 50) handleNext();
+    if (touchEnd - touchStart > 50) handlePrev();
+  };
 
 
   return (
@@ -224,7 +139,7 @@ export default function Home() {
       This integrated approach deepens understanding of rare disease biology and lays the foundation for future targeted therapies.
     </p>
 
-    <button className="primary-btn">Read More →</button>
+    <Link to="/about" className="primary-btn">Read More →</Link>
   </div>
 </section>
 
@@ -324,9 +239,6 @@ export default function Home() {
 
 </div>
 
-<button className="primary-btn">
-Know more about collaborators
-</button>
 
 </section>
 
@@ -368,7 +280,7 @@ Know more about collaborators
           Medical genetics expert who leads the centre and is involved in patient recruitment, diagnosis, and genetic counselling.
         </p>
 
-        <a className="leader-read" href="">Read More</a>
+        <a className="leader-read" href="#" onClick={(e) => e.preventDefault()}>Read More</a>
       </div>
 
 
@@ -401,7 +313,7 @@ Know more about collaborators
           Pioneer in proteomics and mass spectrometry and leads multi-omics and capacity-building programs.
         </p>
 
-        <a className="leader-read" href="">Read More</a>
+        <a className="leader-read" href="#" onClick={(e) => e.preventDefault()}>Read More</a>
       </div>
 
 
@@ -434,7 +346,7 @@ Know more about collaborators
           Specialist in zebrafish disease models and leads in-vivo validation of disease-causing genes.
         </p>
 
-        <a className="leader-read" href="">Read More</a>
+        <a className="leader-read" href="#" onClick={(e) => e.preventDefault()}>Read More</a>
       </div>
 
     </div>
@@ -452,7 +364,7 @@ Know more about collaborators
       The Clinical Research Training Program (CRTP) is a key capacity-building initiative of the centre. It is designed to cultivate physician-scientists through a mentored research environment that enables early-career clinicians to develop strong research competencies. By drawing on the combined expertise, infrastructure, and training resources of participating institutions, the program provides structured mentorship, access to specialized facilities, and exposure to diverse research settings, supporting the development of sustained careers in clinical and public health research.
     </p>
 
-    <button className="primary-btn">Read more → Training</button>
+    <Link to="/training" className="primary-btn">Read More →</Link>
 
   </div>
 </section>
@@ -463,54 +375,38 @@ Know more about collaborators
 
     <h2>Gallery</h2>
 
-    <div className="gallery-wrapper">
+    <div 
+      className="gallery-wrapper"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
+      {SLIDES_DATA.map((slide, i) => (
+        <div 
+          key={i} 
+          className={`gallery-slide ${currentSlide === i ? "active" : ""}`}
+          style={{ display: currentSlide === i ? "block" : "none", opacity: currentSlide === i ? 1 : 0 }}
+        >
+          <img src={slide.img} alt={slide.alt}/>
+          <p className="gallery-caption">{slide.caption}</p>
+        </div>
+      ))}
 
-      <div className="gallery-slide active">
-        <img src="/gallery/Gallery_1.jpg" alt="Workshop"/>
-        <p className="gallery-caption">IOB and DRILS team visit to MAHE, Manipal</p>
+      {/* arrows */}
+      <button className="gallery-prev" onClick={handlePrev}>❮</button>
+      <button className="gallery-next" onClick={handleNext}>❯</button>
+
+      {/* dots indicator */}
+      <div className="gallery-dots">
+        {SLIDES_DATA.map((_, i) => (
+          <span 
+            key={i} 
+            className={`gallery-dot ${currentSlide === i ? "active" : ""}`}
+            onClick={() => setCurrentSlide(i)}
+          />
+        ))}
       </div>
-
-      <div className="gallery-slide">
-        <img src="/gallery/Gallery_2.jpg" alt="Research"/>
-        <p className="gallery-caption">IOB team visit to MAHE, Manipal</p>
-      </div>
-
-      <div className="gallery-slide">
-        <img src="/gallery/Gallery_3.png" alt="Team"/>
-        <p className="gallery-caption">Collaborating institutions meeting</p>
-      </div>
-
-      <div className="gallery-slide">
-        <img src="/gallery/Gallery_4.jpeg" alt="Lab"/>
-        <p className="gallery-caption">DRILS team from Dr. Aarti Sevilimedu’s laboratory, Center for Rare Disease Models, DRILS, Hyderabad</p>
-      </div>
-
-      <div className="gallery-slide">
-        <img src="/gallery/Gallery_5.jpg" alt="Conference"/>
-        <p className="gallery-caption">CRC team at Manipal during the 11th Annual Conference of the SMRM on Mitochondria in Health, Disease and Ageing</p>
-      </div>
-
-      <div className="gallery-slide">
-        <img src="/gallery/Gallery_6.jpg" alt="Team"/>
-        <p className="gallery-caption">Dr. Anju Shukla’s visit to DRILS, Hyderabad</p>
-      </div>
-
-      <div className="gallery-slide">
-        <img src="/gallery/Gallery_7.jpeg" alt="Team"/>
-        <p className="gallery-caption">IOB team visit to MAHE</p>
-      </div>
-
-      <div className="gallery-slide">
-        <img src="/gallery/Gallery_8.jpeg" alt="Team"/>
-        <p className="gallery-caption">Dr. Anju Shukla and Dr. Aarti Sevilimedu at the 12th DBT/WT India Alliance Conclave, Hyderabad</p>
-      </div>
-
-       {/* arrows */}
-  <button className="gallery-prev">❮</button>
-  <button className="gallery-next">❯</button>
-
-  {/* dots indicator */}
-  <div className="gallery-dots"></div>
 
     </div>
 

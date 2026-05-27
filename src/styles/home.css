@@ -85,7 +85,7 @@ body {
 }
 
 .logo-mahe {
-  height: 56px;
+  height: 68px;
   width: auto;
 }
 
@@ -371,7 +371,7 @@ pointer-events:none;
 
 .section-grey {
   background: #F3FBF7;
-  padding: 10px 20px 80px;
+  padding: 60px 20px;
 }
 
 .container {
@@ -384,30 +384,24 @@ pointer-events:none;
 .section h2 {
   font-family: "Jost", sans-serif;
   font-weight: 700;
-
-  font-size: 34px;
-
+  font-size: clamp(24px, 4vw, 34px);
   margin-bottom: 25px;
 }
 
 /* ================= BUTTON ================= */
 
 .primary-btn {
+  display: inline-block;
+  text-decoration: none;
   margin-top: 30px;
-
   padding: 12px 28px;
-
   background: var(--hero-main);
   color: white;
-
   border: none;
   border-radius: 30px;
-
   font-family: "Jost", sans-serif;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: 0.3s;
 }
 
@@ -749,6 +743,7 @@ pointer-events:none;
 }
 .leader-email{
   margin-top:6px;
+  word-break: break-all;
 }
 
 /* =============================== */
@@ -834,22 +829,17 @@ pointer-events:none;
 
 /* CAPTION */
 
-.gallery-caption{
+.gallery-slide .gallery-caption {
   position:absolute;
   bottom:0;
   left:0;
   right:0;
-
   background:rgba(0,0,0,0.55);
-
   color:white;
   font-size:15px;
-
   padding:14px 20px;
-
   border-radius:0 0 16px 16px;
-
-  text-align:center;
+  text-align:center !important;
   letter-spacing:0.3px;
 }
 
@@ -972,7 +962,19 @@ to{ box-shadow: 0 0 25px rgba(140, 100, 255, 0.6); }
 }
 
 
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .leader-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  .gallery-slide img {
+    height: 280px !important;
+  }
 
   /* SHOW HAMBURGER */
   .menu-toggle {
