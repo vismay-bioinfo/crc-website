@@ -54,7 +54,7 @@ research beyond the project’s funding period.
 
 <div className="container">
 
-<h2>Aims & Objectives </h2>
+<h2>Aim & Objectives </h2>
 
 <div className="aim-grid">
 
@@ -101,7 +101,7 @@ research beyond the project’s funding period.
 <h2>Project Workflow</h2>
 
 <img
-src="/about_us/workflow.png"
+src="/about_us/workflow.jpg"
 alt="Rare disease workflow"
 className="workflow-image"
 />
@@ -160,6 +160,7 @@ className="workflow-image"
 
 {/* ================= COLLABORATORS ================= */}
 
+{false && (
 <section className="section section-grey">
 
 <div className="container">
@@ -266,19 +267,11 @@ Dr. Reddy's Institute of Life Sciences (DRILS)
 
 </div>
 </section>
+)}
 
 
 {/* ================= FOOTER ================= */}
-
-<footer className="footer">
-
-<p>
-© 2026 Centre for Rare Diseases  
-<br/>
-Manipal Academy of Higher Education
-</p>
-
-</footer>
+<Footer />
 </div>
 
 );

@@ -260,3 +260,18 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 }
+
+@media (min-width: 1440px) {
+  .about-container h1 {
+    font-size: 48px !important;
+  }
+  .collab-inst {
+    font-size: 32px !important;
+  }
+  .aim-grid {
+    gap: 25px !important;
+  }
+  .sab-grid {
+    gap: 30px !important;
+  }
+}
