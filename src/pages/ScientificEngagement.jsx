@@ -1,21 +1,14 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import "../styles/scientificengagement.css";
 import { piPresentations, teamPresentations } from "../data/globalStage";
 
 
-export default function Engagement(){
-
-  const [showAllPI, setShowAllPI] = useState(false);
-  const [showAllTeam, setShowAllTeam] = useState(false);
-  const [lightboxImg, setLightboxImg] = useState(null);
-
-  const monthMap = {
+const monthMap = {
   Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
   Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11
 };
-
 
 const parseMonthYear = (str) => {
   if (!str) return new Date(0);
@@ -32,18 +25,19 @@ const parseMonthYear = (str) => {
   return new Date(year, monthMap[month]);
 };
 
-const sortedPI = useMemo(() => {
-  return [...piPresentations].sort((a, b) =>
-    parseMonthYear(b.date) - parseMonthYear(a.date)
-  );
-}, [piPresentations]);
+const sortedPI = [...piPresentations].sort((a, b) =>
+  parseMonthYear(b.date) - parseMonthYear(a.date)
+);
 
-const sortedTeam = useMemo(() => {
-  return [...teamPresentations].sort((a, b) =>
-    parseMonthYear(b.date) - parseMonthYear(a.date)
-  );
-}, [teamPresentations]);
+const sortedTeam = [...teamPresentations].sort((a, b) =>
+  parseMonthYear(b.date) - parseMonthYear(a.date)
+);
 
+export default function Engagement(){
+
+  const [showAllPI, setShowAllPI] = useState(false);
+  const [showAllTeam, setShowAllTeam] = useState(false);
+  const [lightboxImg, setLightboxImg] = useState(null);
 
 return(
 

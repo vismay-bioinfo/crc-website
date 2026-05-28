@@ -13,7 +13,6 @@ export default function Contact() {
   message: ""
 });
 
-const [status, setStatus] = useState(null);
 const [loading, setLoading] = useState(false);
 
 
@@ -31,7 +30,6 @@ const handleSubmit = (e) => {
   if (e.target.honeypot?.value) return;
 
   setLoading(true);
-  setStatus(null);
 
   emailjs.send(
     "service_anl6rca",
@@ -71,7 +69,6 @@ const handleSubmit = (e) => {
 
 })
   .catch(() => {
-    setStatus("error");
     setToast("error");
     setTimeout(() => setToast(null), 3000);
   })

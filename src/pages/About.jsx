@@ -160,14 +160,13 @@ className="workflow-image"
 
 {/* ================= COLLABORATORS ================= */}
 
-{false && (
+{/*
 <section className="section section-grey">
 
 <div className="container">
 
 <h2>Collaborators</h2>
 
-{/* MAHE */}
 <div className="collab-group">
 
 <h3 className="collab-inst">
@@ -178,41 +177,42 @@ Manipal Academy of Higher Education (MAHE)
 
 <div className="person-card">
 <h4>Dr. Shalini Nayak</h4>
-<p className="person-role">Associate Professor</p>
-<p>Department of Medical Genetics</p>
+<p className="person-role">Research Associate</p>
 <p>Kasturba Medical College, MAHE</p>
-<p className="person-location">Manipal, India</p>
+<p className="person-location">Manipal, Karnataka, India</p>
 </div>
 
 <div className="person-card">
-<h4>Dr. Vivekananda Bhat</h4>
-<p className="person-role">Assistant Professor</p>
-<p>Department of Medical Genetics</p>
+<h4>Dr. Gargee Das</h4>
+<p className="person-role">Postdoctoral Fellow</p>
 <p>Kasturba Medical College, MAHE</p>
-<p className="person-location">Manipal, India</p>
+<p className="person-location">Manipal, Karnataka, India</p>
 </div>
 
 <div className="person-card">
-<h4>Dr. Purvi Majethia</h4>
-<p className="person-role">Assistant Professor</p>
-<p>Department of Medical Genetics</p>
+<h4>Dr. Amit Jairaman</h4>
+<p className="person-role">Former Postdoctoral Fellow</p>
 <p>Kasturba Medical College, MAHE</p>
-<p className="person-location">Manipal, India</p>
+<p className="person-location">Manipal, Karnataka, India</p>
 </div>
 
 <div className="person-card">
-<h4>Dr. Sanjiban Chakrabarty</h4>
-<p className="person-role">Associate Professor</p>
-<p>Department of Public Health Genomics</p>
-<p>Manipal School of Life Sciences</p>
-<p className="person-location">Manipal, India</p>
+<h4>Dr. M. Jeevan Kumar</h4>
+<p className="person-role">Former Postdoctoral Fellow</p>
+<p>Kasturba Medical College, MAHE</p>
+<p className="person-location">Manipal, Karnataka, India</p>
+</div>
+
+<div className="person-card">
+<h4>Dr. Debasish Kumar Ghosh</h4>
+<p className="person-role">Former Postdoctoral Fellow</p>
+<p>Kasturba Medical College, MAHE</p>
+<p className="person-location">Manipal, Karnataka, India</p>
 </div>
 
 </div>
 </div>
 
-
-{/* IOB */}
 <div className="collab-group">
 
 <h3 className="collab-inst">
@@ -222,44 +222,24 @@ Institute of Bioinformatics (IOB)
 <div className="collab-people">
 
 <div className="person-card">
+<h4>Dr. Madan Gopal Ramarajan</h4>
+<p className="person-role">Postdoctoral Fellow</p>
+<p>Institute of Bioinformatics</p>
+<p className="person-location">Bangalore, Karnataka, India</p>
+</div>
+
+<div className="person-card">
+<h4>Dr. Jisha Chandran</h4>
+<p className="person-role">Postdoctoral Fellow</p>
+<p>Institute of Bioinformatics</p>
+<p className="person-location">Bangalore, Karnataka, India</p>
+</div>
+
+<div className="person-card">
 <h4>Dr. Anikha Bellad</h4>
 <p className="person-role">Faculty Scientist</p>
 <p>Institute of Bioinformatics</p>
 <p className="person-location">Bangalore, Karnataka, India</p>
-</div>
-
-<div className="person-card">
-<h4>Dr. Vishalakshi Nanjappa</h4>
-<p className="person-role">Faculty Scientist</p>
-<p>Institute of Bioinformatics</p>
-<p className="person-location">Bangalore, Karnataka, India</p>
-</div>
-
-</div>
-</div>
-
-
-{/* DRILS */}
-<div className="collab-group">
-
-<h3 className="collab-inst">
-Dr. Reddy's Institute of Life Sciences (DRILS)
-</h3>
-
-<div className="collab-people">
-
-<div className="person-card">
-<h4>Dr. Kiranam Chatti</h4>
-<p className="person-role">Senior Principal Research Scientist – II & Head – CARS</p>
-<p>Dr. Reddy's Institute of Life Sciences</p>
-<p className="person-location">Hyderabad, Telangana, India</p>
-</div>
-
-<div className="person-card">
-<h4>Dr. Kishore Parsa</h4>
-<p className="person-role">Senior Principal Research Scientist – II & Head – CIMPS</p>
-<p>Dr. Reddy's Institute of Life Sciences</p>
-<p className="person-location">Hyderabad, Telangana, India</p>
 </div>
 
 </div>
@@ -267,7 +247,7 @@ Dr. Reddy's Institute of Life Sciences (DRILS)
 
 </div>
 </section>
-)}
+*/}
 
 
 {/* ================= FOOTER ================= */}
