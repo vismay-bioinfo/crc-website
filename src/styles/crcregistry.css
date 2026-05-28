@@ -94,13 +94,27 @@ border-top:4px solid #ece6f7;
 
 }
 
+.registry-card.card-green {
+  border-top: 4px solid #16A34A;
+}
+
+.registry-card.card-blue {
+  border-top: 4px solid #2b6cb0;
+}
+
+.registry-card.card-purple {
+  border-top: 4px solid #6411AD;
+}
+
+.registry-card.card-yellow {
+  border-top: 4px solid #F2C94C;
+}
+
 .registry-card:hover{
 
 transform:translateY(-4px);
 
 box-shadow:0 12px 28px rgba(0,0,0,0.08);
-
-border-color:#d6def0;
 
 }
 

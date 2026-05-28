@@ -8,13 +8,6 @@ export default function Progress() {
     <div className="page">
       <Navbar />
 
-      {/* ================= HERO ================= */}
-      <section className="progress-hero">
-        <div className="container">
-          <h1>Progress</h1>
-        </div>
-      </section>
-
       {/* ================= SECTION 1: COHORT & BIOREPOSITORY ================= */}
       <section className="section section-grey">
         <div className="container progress-content">

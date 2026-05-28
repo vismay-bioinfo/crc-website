@@ -279,7 +279,7 @@ export default function Home() {
           Medical genetics expert who leads the centre and is involved in patient recruitment, diagnosis, and genetic counselling.
         </p>
 
-        <a className="leader-read" href="#" onClick={(e) => e.preventDefault()}>Read More</a>
+        <a className="leader-read" href="https://researcher.manipal.edu/en/persons/anju-shukla/" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
 
 
@@ -312,7 +312,7 @@ export default function Home() {
           Pioneer in proteomics and mass spectrometry and leads multi-omics and capacity-building programs.
         </p>
 
-        <a className="leader-read" href="#" onClick={(e) => e.preventDefault()}>Read More</a>
+        <a className="leader-read" href="https://www.ibioinformatics.org/founder_and_director.php" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
 
 
@@ -345,7 +345,7 @@ export default function Home() {
           Specialist in zebrafish disease models and leads in-vivo validation of disease-causing genes.
         </p>
 
-        <a className="leader-read" href="#" onClick={(e) => e.preventDefault()}>Read More</a>
+        <a className="leader-read" href="https://drils.org/team/aarti-sevilimedu/" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
 
     </div>

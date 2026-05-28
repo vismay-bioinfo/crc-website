@@ -65,13 +65,13 @@ improvements in patient care and outcomes on a global scale.
 
 <div className="registry-grid">
 
-<div className="registry-card">Demographics</div>
+<div className="registry-card card-green">Demographics</div>
 
-<div className="registry-card">Genomic Details</div>
+<div className="registry-card card-blue">Genomic Details</div>
 
-<div className="registry-card">Clinical Information</div>
+<div className="registry-card card-purple">Clinical Information</div>
 
-<div className="registry-card">Variant Classification</div>
+<div className="registry-card card-yellow">Variant Classification</div>
 
 </div>
 
