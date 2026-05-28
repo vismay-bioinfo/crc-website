@@ -16,25 +16,38 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Middle Column: Quick Navigation Links */}
+        {/* Middle Column: Quick Navigation Links (Split 4 and 4) */}
         <div className="footer-section footer-links">
           <h3>Quick Links</h3>
           <div className="footer-links-grid">
-            <Link to="/">Home</Link>
-            <Link to="/about">About Us</Link>
-            <Link to="/progress">Progress & Milestones</Link>
-            <Link to="/publications">Publications</Link>
-            <Link to="/training">Training</Link>
-            <Link to="/scientific-engagement">Scientific Engagement</Link>
-            <Link to="/crc-registry">Registry</Link>
-            <Link to="/contact">Contact Us</Link>
+            <div className="footer-links-col">
+              <Link to="/">Home</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/progress">Progress</Link>
+              <Link to="/publications">Publications</Link>
+            </div>
+            <div className="footer-links-col">
+              <Link to="/training">Training</Link>
+              <Link to="/scientific-engagement">Scientific Engagement</Link>
+              <Link to="/crc-registry">Registry</Link>
+              <Link to="/contact">Contact Us</Link>
+            </div>
           </div>
         </div>
 
         {/* Right Column: Connect & Location Info */}
         <div className="footer-section footer-social">
           <h3>Connect with Us</h3>
-          <p>Department of Medical Genetics, Kasturba Medical College, MAHE, Manipal, Karnataka, India.</p>
+          
+          <div className="footer-address-box">
+            <p className="footer-address-title">Department of Medical Genetics</p>
+            <p className="footer-address-text">
+              3rd Floor, Basic Sciences Block<br />
+              Kasturba Medical College, MAHE<br />
+              Manipal - 576104, Karnataka, India
+            </p>
+          </div>
+
           <div className="footer-social-icons">
             <a 
               href="https://www.linkedin.com/company/centre-for-rare-diseases-mahe" 
