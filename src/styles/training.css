@@ -98,10 +98,16 @@ margin-bottom:6px;
 }
 
 .fellow-role{
-font-size:13px;
-font-weight:600;
-color:var(--hero-main);
-margin-bottom:10px;
+  font-size:13px;
+  font-weight:600;
+  color:var(--hero-main);
+  margin-bottom:10px;
+
+  text-align:center;
+
+  display:flex;              /* ⭐ KEY CHANGE */
+  flex-direction:column;     /* stack lines */
+  align-items:center;        /* center BOTH lines perfectly */
 }
 
 .fellow-bio{

@@ -85,7 +85,8 @@ rigorous academic training alongside translational research experience.
 <h3>Dr. Aakanksha Anand</h3>
 
 <p className="fellow-role">
-CRTP Fellow & PhD Scholar, MAHE
+CRTP Fellow & PhD Scholar<br />
+<span>MAHE</span>
 </p>
 
 <p className="fellow-bio">
@@ -107,7 +108,8 @@ explore potential therapeutic avenues.
 <h3>Dr. Gunveen S. Sachdeva</h3>
 
 <p className="fellow-role">
-CRTP Fellow & PhD Scholar, Institute of Bioinformatics
+CRTP Fellow & PhD Scholar<br />
+<span>Institute of Bioinformatics</span>
 </p>
 
 <p className="fellow-bio">
@@ -128,7 +130,8 @@ highly sensitive mass spectrometry
 <h3>Dr. Md. Yasir</h3>
 
 <p className="fellow-role">
-CRTP Fellow & PhD Scholar, Institute of Bioinformatics
+CRTP Fellow & PhD Scholar<br />
+<span>Institute of Bioinformatics</span>
 </p>
 
 <p className="fellow-bio">
@@ -149,7 +152,8 @@ integrate mass spectrometry-based 'omics' with clinical genetics to enhance rare
 <h3>Dr. Janani R</h3>
 
 <p className="fellow-role">
-CRTP Fellow & PhD Scholar, Institute of Bioinformatics
+CRTP Fellow & PhD Scholar<br />
+<span>Institute of Bioinformatics</span>
 </p>
 
 <p className="fellow-bio">
@@ -168,7 +172,8 @@ A medical biochemist from the Lady Hardinge Medical College (LHMC), New Delhi, D
 <h3>Dr. A V Nandakumar</h3>
 
 <p className="fellow-role">
-CRTP Fellow & PhD Scholar, Institute of Bioinformatics
+CRTP Fellow & PhD Scholar<br />
+<span>Institute of Bioinformatics</span>
 </p>
 
 <p className="fellow-bio">

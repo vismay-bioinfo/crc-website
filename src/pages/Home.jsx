@@ -27,6 +27,7 @@ export default function Home() {
 
     const startCounter = (counter) => {
       const target = +counter.getAttribute("data-target");
+      const prefix = counter.getAttribute("data-prefix") || ""; 
       const suffix = counter.getAttribute("data-suffix") || "";
 
       let count = 0;
@@ -36,10 +37,10 @@ export default function Home() {
         count += increment;
 
         if (count < target) {
-          counter.innerText = Math.floor(count).toLocaleString() + suffix;
+          counter.innerText = prefix + Math.floor(count).toLocaleString() + suffix;
           requestAnimationFrame(update);
         } else {
-          counter.innerText = target.toLocaleString() + suffix;
+          counter.innerText = prefix + target.toLocaleString() + suffix;
         }
       };
 
@@ -157,7 +158,7 @@ export default function Home() {
       </div>
 
       <div className="stat-card">
-        <div className="stat-number" data-target="53.6" data-suffix="%">0</div>
+        <div className="stat-number" data-target="53.6" data-prefix="~" data-suffix="%">0</div>
         <p>Diagnostic Yield</p>
       </div>
 
@@ -167,12 +168,12 @@ export default function Home() {
       </div>
 
       <div className="stat-card">
-        <div className="stat-number" data-target="103">0</div>
+        <div className="stat-number" data-target="103" data-suffix="+">0</div>
         <p>Tissue Samples Banked</p>
       </div>
 
       <div className="stat-card">
-        <div className="stat-number" data-target="1512">0</div>
+        <div className="stat-number" data-target="1512" data-suffix="+">0</div>
         <p>Affected Individuals</p>
       </div>
 

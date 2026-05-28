@@ -50,19 +50,19 @@ export default function Footer() {
 
           <div className="footer-social-icons">
             <a 
-              href="https://www.linkedin.com/company/centre-for-rare-diseases-mahe" 
+              href="https://www.linkedin.com/" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
               LinkedIn
             </a>
-            <a 
-              href="mailto:genetics.clinic@manipal.edu" 
-              aria-label="Email"
-            >
+            <Link
+              to="/contact"
+              aria-label="Contact Page"
+              >
               Email
-            </a>
+            </Link>
           </div>
         </div>
 
