@@ -138,7 +138,7 @@ export default function Progress() {
 
           {/* Specimen Repository Panel */}
           <div className="dashboard-panel repository-panel">
-            <h3>Biorepository Central Stock</h3>
+            <h3>Biorepository</h3>
             <p className="repository-intro">
               High-quality genomic DNA isolated and banked from <strong>3,498 blood samples</strong>. 
               Additionally, <strong>103 tissue specimens</strong> collected from <strong>87 families</strong> support ongoing downstream clinical functional validation assays:

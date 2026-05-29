@@ -1,4 +1,77 @@
+// Last updated on 29 May 2026 | Data current as of April 2026 APR
 export const publications = [
+  {
+    year: 2026,
+    title: "Biallelic Splicing Variant c.12479+3A>G in FAT4 Causes Hennekam Lymphangiectasia-Lymphedema Syndrome 2",
+    authors: "Mascarenhas S, Gupta Y, A.K. A, et al",
+    journal: "American Journal of Medical Genetics Part A",
+    doi: "10.1002/ajmg.a.70166"
+  },
+
+  {
+    year: 2026,
+    title: "Extensive Hypoglycosylation of Serum N-Glycoproteins in SRD5A3 Deficiency",
+    authors: "Jain A, Budhraja R, Garapati K, Lam C, Schultz MJ, Kozicz T, Morava E, Pandey A",
+    journal: "Journal of Inherited Metabolic Disease",
+    doi: "10.1002/jimd.70163"
+  },
+
+  {
+    year: 2026,
+    title: "A novel homozygous in-frame deletion variant in TPRKB causing Galloway-Mowat syndrome 5",
+    authors: "Kaur N, Shirsat K, Bhat V, Yeole M, Farooqui S, Limaye S, Radhakrishnan P, Siddiqui S, Narayanan DL, Shenoy R, Shukla A",
+    journal: "Neurogenetics",
+    doi: "10.1007/s10048-026-00884-5"
+  },
+
+  {
+    year: 2026,
+    title: "Impaired SERPINF1 Expression due to c.[-37C>A];[829_831del] Causes Osteogenesis Imperfecta VI",
+    authors: "Badiger VA, Nampoothiri S, Vangara MM, Majethia P, Girisha KM, Radhakrishnan P, Shukla A",
+    journal: "American Journal of Medical Genetics Part A",
+    doi: "10.1002/ajmga.70020"
+  },
+
+  {
+    year: 2026,
+    title: "Hemoglobin alpha-like subunit mu is expressed during ontogeny and is elevated in alpha thalassemia",
+    authors: "Garapati K, Chavan S, Bellad A, Venkataraman S, Oglesbee D, Chakraborty R, Wick MJ, Girard S, Pandey A",
+    journal: "Blood: Red Cells & Iron",
+    doi: "10.1016/j.brci.2025.100043"
+  },
+
+  {
+    year: 2025,
+    title: "A novel dominant-negative variant of IRF8 in a mother and son: Clinical, phenotypic and biological characteristics",
+    authors: "Ham H, Isham CR, Ristagno EH, Correia C, Ennis SM, Kandasamy RK, Garapati K, et al",
+    journal: "Journal of Allergy and Clinical Immunology",
+    doi: "10.1016/j.jaci.2024.11.041"
+  },
+
+  {
+    year: 2026,
+    title: "Network Hypoactivity in ALG13-CDG: Disrupted Developmental Pathways and E/I Imbalance as Early Drivers of Neurological Features in CDG",
+    authors: "Shah R, Budhraja R, Radenkovic S, Preston G, King AT, Sabry S, Bleukx C, Shammas I, Young L, Chandran J, Byeon SK, Hrstka R, Smith DY, Pandey A, Morava E, Kozicz T",
+    journal: "Cells",
+    doi: "10.3390/cells15020147"
+  },
+
+  {
+    year: 2026,
+    title: "Pathogenetic mechanisms of muscle-specific ribosomes in dilated cardiomyopathy",
+    authors: "Murphy MR, Ganapathi M, Rotlevi ER, et al",
+    journal: "Nature Cardiovascular Research",
+    doi: "10.1038/s44161-025-00761-8"
+  },
+
+  {
+    year: 2025,
+    title: "Advances in mucopolysaccharidosis research: the impact of mass spectrometry-based approaches",
+    authors: "Ramarajan MG, Garapati K, Ghose V, et al",
+    journal: "Clinical Proteomics",
+    doi: "10.1186/s12014-025-09562-4"
+  },
+
   {
     year: 2025,
     title: "Advances in mucopolysaccharidosis research: the impact of mass spectrometry-based approaches",
